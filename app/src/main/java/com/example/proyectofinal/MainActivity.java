@@ -4,16 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< Updated upstream
 import android.widget.Button;
 import android.widget.ImageView;
+=======
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+>>>>>>> Stashed changes
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+<<<<<<< Updated upstream
         //Imagen que aparece en el principio de la app movil//
 
         ImageView imagen = findViewById(R.id.imagenLogo);
@@ -44,5 +52,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
     });
 
+=======
+        Button btn = findViewById(R.id.btnLogin);
+
+
+>>>>>>> Stashed changes
     }
 }

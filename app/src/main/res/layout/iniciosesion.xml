@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< Updated upstream
     android:background="#D9C2A3"
+=======
+    android:background="#F5E6D3"
+>>>>>>> Stashed changes
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -16,6 +20,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+<<<<<<< Updated upstream
             android:layout_height="675dp"
             android:background="@android:color/white"
             android:elevation="9dp"
@@ -52,19 +57,62 @@
                 android:textSize="20sp" />
 
 
+=======
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@android:color/white"
+            android:elevation="8dp">
+
+            <!-- Icono -->
+
+            <!-- Nombre -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Raven Coff"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#6F4E37"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Subtitulo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido"
+                android:textSize="18sp"
+                android:textColor="#777777"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"/>
+
+            <!-- Nombre -->
+>>>>>>> Stashed changes
             <EditText
                 android:id="@+id/etNombre"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
+<<<<<<< Updated upstream
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="#D7CCC8"
                 android:hint="Nombre de usuario"
                 android:padding="15dp" />
 
+=======
+                android:hint="Nombre"
+                android:padding="15dp"
+                android:backgroundTint="#D7CCC8"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Correo -->
+>>>>>>> Stashed changes
             <EditText
                 android:id="@+id/etCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
+<<<<<<< Updated upstream
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="#D7CCC8"
                 android:hint="Correo electronico"
@@ -90,6 +138,37 @@
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+=======
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:backgroundTint="#D7CCC8"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Contraseña -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:backgroundTint="#D7CCC8"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="30dp"/>
+
+            <!-- Botón -->
+            <Button
+                android:id="@+id/btnCrear"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="CREAR"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#6F4E37"/>
+>>>>>>> Stashed changes
 
         </LinearLayout>
 
