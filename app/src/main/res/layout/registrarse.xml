@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D9C2A3"
+    android:background="#B844"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -17,10 +15,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="675dp"
-            android:background="@android:color/white"
+            android:background="@color/white"
             android:elevation="9dp"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:padding="24dp"
+            tools:ignore="UselessParent">
 
 
             <TextView
@@ -28,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="Raven Coff"
+                android:text="@string/ravencoff"
                 android:textColor="#6F4E37"
                 android:textSize="35sp"
                 android:textStyle="bold" />
@@ -39,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Inicia sesion"
+                android:text="@string/crea_tu_cuenta"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -48,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
-                android:textColor="#777777"
+                android:textColor="#472E2E"
                 android:textSize="20sp" />
 
 
@@ -59,7 +58,8 @@
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="#D7CCC8"
                 android:hint="Nombre de usuario"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:autofillHints="username" />
 
             <EditText
                 android:id="@+id/etCorreo"
@@ -81,12 +81,23 @@
                 android:inputType="textPassword"
                 android:padding="15dp" />
 
+            <EditText
+                android:id="@+id/etNumero"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#D7CCC8"
+                android:hint="Numero de telefono"
+                android:inputType="text|number"
+                android:padding="15dp" />
+
+
             <Button
                 android:id="@+id/btnCrear"
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
-                android:backgroundTint="#6F4E37"
-                android:text="INICIAR SESION"
+                android:backgroundTint="#B844"
+                android:text="CREAR CUENTA"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold" />
