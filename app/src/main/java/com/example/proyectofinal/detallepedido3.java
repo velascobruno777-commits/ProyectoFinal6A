@@ -37,7 +37,7 @@ public class detallepedido3 extends AppCompatActivity {
 
                 Toast.makeText(this, "Enviando datos...", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(detallepedido3.this, .class);
+                Intent intent = new Intent(detallepedido3.this, letrero.class);
                 intent.putExtra("nombre", n);
                 intent.putExtra("fecha", f);
 
