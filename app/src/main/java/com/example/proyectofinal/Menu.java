@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.tabs.TabLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class Menu extends AppCompatActivity {
 
     // Variables de las pestañas y bloques
     private TabLayout tabLayoutCategorias;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_menu);
 
         // Enlazamos los contenedores y pestañas con el diseño XML
         tabLayoutCategorias = findViewById(R.id.tabLayoutCategorias);
