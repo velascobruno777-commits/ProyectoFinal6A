@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#B844"
-    tools:context=".Acciones">
+    tools:context=".RegistrarCuenta">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,10 +56,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginBottom="20dp"
+                android:autofillHints="username"
                 android:backgroundTint="#D7CCC8"
                 android:hint="Nombre de usuario"
                 android:padding="15dp"
-                android:autofillHints="username" />
+                android:textColorHint="#351919" />
 
             <EditText
                 android:id="@+id/etCorreo"
@@ -69,7 +70,8 @@
                 android:backgroundTint="#D7CCC8"
                 android:hint="Correo electronico"
                 android:inputType="textEmailAddress"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textColorHint="#271515" />
 
             <EditText
                 android:id="@+id/etcontraseña"
@@ -79,7 +81,8 @@
                 android:backgroundTint="#D7CCC8"
                 android:hint="Contraseña"
                 android:inputType="textPassword"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textColorHint="#231010" />
 
             <EditText
                 android:id="@+id/etNumero"
@@ -89,7 +92,8 @@
                 android:backgroundTint="#D7CCC8"
                 android:hint="Numero de telefono"
                 android:inputType="text|number"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textColorHint="#2C1515" />
 
 
             <Button
@@ -97,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:backgroundTint="#B844"
-                android:text="CREAR CUENTA"
+                android:text="CREAR MI CUENTA"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold" />

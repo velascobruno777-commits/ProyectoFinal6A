@@ -255,7 +255,6 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/agua_horchata"
                             android:scaleType="centerCrop"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -313,7 +312,6 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/agua_jamaica"
                             android:scaleType="centerCrop"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -342,7 +340,6 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/agua_limon"
                             android:scaleType="centerCrop"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -380,7 +377,6 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/galletas"
                             android:scaleType="centerCrop"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -435,10 +431,10 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:padding="12dp">
+
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/palomitas"
                             android:scaleType="centerCrop"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -467,7 +463,6 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/papas"
                             android:scaleType="centerCrop"/>
                         <TextView
                             android:layout_width="wrap_content"

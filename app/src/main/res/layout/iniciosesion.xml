@@ -53,9 +53,12 @@
                 android:layout_height="55dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="#D7CCC8"
+                android:foregroundTint="#612D2D"
                 android:hint="Correo electrónico"
                 android:inputType="textEmailAddress"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:shadowColor="#F44336"
+                android:textColorHint="#3A1E1C" />
 
             <EditText
                 android:id="@+id/etPassword"
@@ -65,14 +68,15 @@
                 android:backgroundTint="#D7CCC8"
                 android:hint="Contraseña"
                 android:inputType="textPassword"
-                android:padding="15dp" />
+                android:padding="15dp"
+                android:textColorHint="#471D1D" />
 
             <Button
-                android:id="@+id/btnCrear"
+                android:id="@+id/btniniciar"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:backgroundTint="#6F4E37"
-                android:text="INICIAR SESIÓN"
+                android:layout_height="85dp"
+                android:backgroundTint="#B844"
+                android:text="INICIAR MI SESION"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 android:textStyle="bold" />
