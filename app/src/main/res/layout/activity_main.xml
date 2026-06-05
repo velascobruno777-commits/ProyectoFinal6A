@@ -1,61 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D8C1A0"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="#D9C2A3"
-    tools:context=".Acciones">
-
-    <!-- imagen del logo en la pantalla -->
+    android:padding="25dp">
 
     <ImageView
         android:id="@+id/imagenLogo"
-        android:layout_width="300dp"
-        android:layout_height="277dp"
-        android:src="@drawable/logo" />
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/logo"
+        android:scaleType="fitCenter" />
 
     <TextView
-        android:id="@+id/txtBIENVENIDO"
+        android:id="@+id/txtBienvenido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BIENVENIDO"
-        android:textSize="32sp"
-        android:textStyle="bold"
         android:textColor="#5C4033"
-        android:layout_marginBottom="10dp"/>
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
+
     <TextView
-        android:id="@+id/txtCAFETERIA"
+        android:id="@+id/txtCafeteria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="A NUESTRA CAFETERIA"
-        android:textSize="28sp"
-        android:textStyle="bold"
         android:textColor="#5C4033"
-        android:layout_marginBottom="60dp"/>
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp" />
 
     <Button
         android:id="@+id/btniniciar"
         android:layout_width="220dp"
         android:layout_height="50dp"
+        android:layout_marginTop="55dp"
+        android:backgroundTint="#A87959"
         android:text="Iniciar sesion"
-        android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:backgroundTint="#A67B5B"
-        android:layout_marginBottom="20dp"/>
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnCrear"
         android:layout_width="220dp"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#C99A68"
         android:text="Crear cuenta"
-        android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:backgroundTint="#C49A6C"/>
-
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
