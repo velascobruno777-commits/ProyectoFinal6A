@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D9C2A3"
-    tools:context=".MainActivity">
+    tools:context=".letrero">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/tarjeta"

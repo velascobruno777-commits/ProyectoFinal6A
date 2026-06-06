@@ -1,51 +1,49 @@
 package com.example.proyectofinal;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class detallepedido2 extends AppCompatActivity {
 
-    public class detallepedido2 extends AppCompatActivity {
+    EditText Nombre, Fecha;
+    Button btnEnviar;
+    ImageButton btnBack;
 
-        EditText Nombre, Fecha;
-        Button btnEnviar;
-        Button btnBack;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.detalledelpedido2);
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.detalledelpedido2);
+        Nombre = findViewById(R.id.inputNombre);
+        Fecha = findViewById(R.id.inputFecha);
+        btnEnviar = findViewById(R.id.button);
+        btnBack = findViewById(R.id.btnBack);
 
-            Nombre = findViewById(R.id.inputNombre);
-            Fecha = findViewById(R.id.inputFecha);
-            btnEnviar = findViewById(R.id.button);
-            btnBack = findViewById(R.id.button);
+        // Botón para regresar al menú
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(detallepedido2.this, menu.class);
+        });
 
-            btnEnviar.setOnClickListener(v -> {
+        // Botón comprar
+        btnEnviar.setOnClickListener(v -> {
 
-                String n = Nombre.getText().toString();
-                String f = Fecha.getText().toString();
+            String n = Nombre.getText().toString().trim();
+            String f = Fecha.getText().toString().trim();
 
-                if(n.isEmpty()){
-                    Nombre.setError("Escribe tu nombre");
-                } else if(f.isEmpty()){
-                    Fecha.setError("Escribe la fecha");
-                } else {
+            if (n.isEmpty()) {
+                Nombre.setError("Escribe tu nombre");
+            } else if (f.isEmpty()) {
+                Fecha.setError("Escribe la fecha");
+            } else {
 
-                    Toast.makeText(this, "Enviando datos...", Toast.LENGTH_SHORT).show();
-
-                    Intent intent = new Intent(detallepedido2.this, letrero.class);
-                    intent.putExtra("nombre", n);
-                    intent.putExtra("fecha", f);
-
-                    startActivity(intent);
-                }
-            });
-        }
-
-        private void startActivity(Intent intent) {
-        }
+                Intent intent = new Intent(detallepedido2.this, letrero.class);
+                startActivity(intent);
+            }
+        });
     }
+}
