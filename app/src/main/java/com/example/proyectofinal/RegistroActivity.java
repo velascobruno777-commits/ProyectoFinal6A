@@ -14,12 +14,12 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
 
-public class RegisterActivity extends Activity {
+public class RegistroActivity extends Activity {
 
     EditText etNombre, etCorreoRegistro, etPasswordRegistro, etNumero;
     Button btnCrearCuenta;
 
-    String url = "http://192.168.1.16:5000/usuarios";
+    String url = "http://10.0.0.10:5000/usuarios";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +63,7 @@ public class RegisterActivity extends Activity {
                     response -> {
                         Toast.makeText(this, "Cuenta creada correctamente", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(RegisterActivity.this, InicioActivity.class);
+                        Intent intent = new Intent(RegistroActivity.this, InicioActivity.class);
                         startActivity(intent);
                     },
                     error -> {

@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         });
 
         btnCrear.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            Intent intent = new Intent(MainActivity.this, RegistroActivity.class);
             startActivity(intent);
         });
     }

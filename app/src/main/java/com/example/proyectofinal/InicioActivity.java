@@ -1,6 +1,7 @@
 package com.example.proyectofinal;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,9 +27,13 @@ public class InicioActivity extends Activity {
             String password = etPassword.getText().toString().trim();
 
             if (correo.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Llena todos los campos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(InicioActivity.this, "Llena todos los campos", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
+                Toast.makeText(InicioActivity.this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(InicioActivity.this, Menu.class);
+                startActivity(intent);
+                finish();
             }
 
         });
