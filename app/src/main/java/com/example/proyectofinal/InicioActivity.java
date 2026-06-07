@@ -1,103 +1,41 @@
 package com.example.proyectofinal;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
-import android.widget.Button;
-import android.widget.EditText;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+public class InicioActivity extends Activity {
 
-
-public class InicioActivity extends AppCompatActivity {
-
-    EditText nombre, contraseña;
-    Button iniciar;
-
+    EditText etCorreo, etPassword;
+    Button btniniciarSesion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.iniciosesion);
+        setContentView(R.layout.iniciosecion);
 
-        nombre= findViewById(R.id.etNombre);
+        etCorreo = findViewById(R.id.etCorreo);
+        etPassword = findViewById(R.id.etPassword);
+        btniniciarSesion = findViewById(R.id.btniniciarSesion);
 
-        contraseña= findViewById(R.id.etcontraseña);
+        btniniciarSesion.setOnClickListener(v -> {
 
-        iniciar= findViewById(R.id.btnCrear);
+            String correo = etCorreo.getText().toString().trim();
+            String password = etPassword.getText().toString().trim();
 
+            if (correo.isEmpty() || password.isEmpty()) {
+                Toast.makeText(InicioActivity.this, "Llena todos los campos", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(InicioActivity.this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
 
-        //detector del boton al tocar iniciar sesion
-        iniciar.setOnClickListener(v -> {
+                Intent intent = new Intent(InicioActivity.this, Menu.class);
+                startActivity(intent);
+                finish();
+            }
 
-
-            //aca guarda la info de ususario
-            String usuario = nombre.getText().toString();
-
-            String contra = contraseña.getText().toString();
-
-
-            // (es la IP actual de Flask, y une el usuario
-            // y la contraseña)
-
-            String url = "http://10.0.0.14:5000/usuarios/login/"
-                    + usuario + "/" + contra;
-
-            //Consultaremos a flask
-
-            StringRequest request = new StringRequest(
-                    Request.Method.GET,
-                    url,
-
-                    response -> {
-
-                        Toast.makeText(
-                                getApplicationContext(),
-                                "LOGIN CORRECTO",
-                                Toast.LENGTH_SHORT
-                        ).show();
-
-                        Intent intent = new Intent(
-                                InicioActivity.this,
-                                MenuActivity.class
-                        );
-
-                        startActivity(intent);
-
-                        finish();
-                    },
-
-
-                    error -> {
-
-                        Toast.makeText(
-                                getApplicationContext(),
-                                "Usuario incorrecto",
-                                Toast.LENGTH_SHORT
-                        ).show();
-                    }
-
-            );
-
-
-            //crear cola de volley para mandar la peticion a Flask
-            RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-
-            queue.add(request);
         });
-
-
-
-
-
     }
 }
