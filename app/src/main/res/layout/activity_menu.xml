@@ -131,7 +131,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Pizza Pepperoni\n$45.00"
+                                android:text="Pizza Pepperoni\n$30.00"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
@@ -179,7 +179,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Baguette\n$45.00"
+                                android:text="Baguette\n$60.00"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
@@ -242,6 +242,15 @@
                 </LinearLayout>
             </LinearLayout>
 
+
+
+
+
+
+
+
+
+
             <LinearLayout
                 android:id="@+id/bloqueBebidas"
                 android:layout_width="match_parent"
@@ -280,7 +289,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Agua de Horchata\n$20.00"
+                                android:text="Agua de Horchata\n$15.00"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
@@ -288,6 +297,7 @@
                                 android:textColor="#4A3E3D" />
 
                             <Button
+                                android:id="@+id/btnVerHorchata"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:layout_marginTop="8dp"
@@ -318,13 +328,13 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/jugo_naranja"
+                                android:src="@drawable/refresco"
                                 android:scaleType="centerCrop" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Jugo de Naranja\n$25.00"
+                                android:text="Refresco\n$20.00"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
@@ -332,6 +342,7 @@
                                 android:textColor="#4A3E3D" />
 
                             <Button
+                                android:id="@+id/btnVerRefresco"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:layout_marginTop="8dp"
@@ -371,7 +382,7 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/aguas"
+                                android:src="@drawable/aguas_frescas"
                                 android:scaleType="centerCrop" />
 
                             <TextView
@@ -385,6 +396,7 @@
                                 android:textColor="#4A3E3D" />
 
                             <Button
+                                android:id="@+id/btnVerAguaDia"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:layout_marginTop="8dp"
@@ -415,13 +427,13 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/limon"
+                                android:src="@drawable/agualimon"
                                 android:scaleType="centerCrop" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Agua de Limón\n$35.00"
+                                android:text="Agua de Limón\n$15.00"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
@@ -429,6 +441,7 @@
                                 android:textColor="#4A3E3D" />
 
                             <Button
+                                android:id="@+id/btnVerLimon"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:layout_marginTop="8dp"
@@ -444,6 +457,14 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+
+
+
+
+
+
+            <!-- BLOQUE SNACKS-->
 
 
             <LinearLayout
@@ -484,7 +505,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Galletas de Chocolate\n$25.00"
+                                android:text="Galletas de Chocolate\n$22.00"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
@@ -492,6 +513,7 @@
                                 android:textColor="#4A3E3D" />
 
                             <Button
+                                android:id="@+id/btnVerGalletas"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:layout_marginTop="8dp"
@@ -528,7 +550,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Gomitas Enchiladas\n$30.00"
+                                android:text="Gomitas Enchiladas\n$25.00"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
@@ -536,6 +558,7 @@
                                 android:textColor="#4A3E3D" />
 
                             <Button
+                                android:id="@+id/btnVerGomitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:layout_marginTop="8dp"
@@ -550,7 +573,7 @@
 
                 </LinearLayout>
 
-                <!-- Fila 2: Palomitas y Frituras -->
+                <!-- Fila 2: Cuernitos y Frituras -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -575,13 +598,13 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/palomitas"
+                                android:src="@drawable/cuernito_chocolate"
                                 android:scaleType="centerCrop" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Palomitas de Sabores\n$40.00"
+                                android:text="Cuernito de Chocolate\n$22.00"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
@@ -589,6 +612,7 @@
                                 android:textColor="#4A3E3D" />
 
                             <Button
+                                android:id="@+id/btnVerCuernito"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:layout_marginTop="8dp"
@@ -625,7 +649,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Frituras\n$35.00"
+                                android:text="Frituras\n$25.00"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:gravity="center"
@@ -633,6 +657,7 @@
                                 android:textColor="#4A3E3D" />
 
                             <Button
+                                android:id="@+id/btnVerFrituras"
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:layout_marginTop="8dp"

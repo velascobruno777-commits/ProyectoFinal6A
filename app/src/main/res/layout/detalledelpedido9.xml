@@ -18,7 +18,6 @@
         android:elevation="4dp"
         android:padding="8dp"
         android:src="@android:drawable/ic_media_previous"
-        android:tint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="12dp" />
@@ -37,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnBack"
-        app:srcCompat="@drawable/maruchan" />
+        app:srcCompat="@drawable/galletaspaquete" />
 
     <!-- Nombre producto -->
     <TextView
@@ -46,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="serif-monospace"
-        android:text="maruchan"
+        android:text="Galletas"
         android:textColor="#853636"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -98,7 +97,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:fontFamily="serif-monospace"
-        android:text="$30"
+        android:text="$22"
         android:textColor="#853636"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -107,7 +106,7 @@
 
     <!-- Botón Comprar -->
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnEnviar"
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginTop="24dp"

@@ -17,7 +17,7 @@ public class letrero extends AppCompatActivity {
         pedido.setText("Pedido realizado");
         regresar = findViewById(R.id.regresar);
         regresar.setOnClickListener(v -> {
-            Intent intent = new Intent(letrero.this, sustituir por el menú.class);
+            Intent intent = new Intent(letrero.this, Menu.class);
             startActivity(intent);
         });
     }

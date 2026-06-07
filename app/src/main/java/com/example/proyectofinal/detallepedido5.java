@@ -21,12 +21,12 @@ public class detallepedido5 extends AppCompatActivity {
 
         Nombre = findViewById(R.id.inputNombre);
         Fecha = findViewById(R.id.inputFecha);
-        btnEnviar = findViewById(R.id.button);
+        btnEnviar = findViewById(R.id.btnEnviar);
         btnBack = findViewById(R.id.btnBack);
 
         // Botón para regresar al menú
         btnBack.setOnClickListener(v -> {
-            Intent intent = new Intent(detallepedido5.this, menu.class);
+            finish();
         });
 
         // Botón comprar

@@ -21,12 +21,20 @@
         <activity android:name=".detallepedido2"/>
         <activity android:name=".detallepedido3"/>
         <activity android:name=".detallepedido4"/>
+
         <activity android:name=".detallepedido5"/>
         <activity android:name=".detallepedido6"/>
         <activity android:name=".detallepedido7"/>
         <activity android:name=".detallepedido8"/>
-     
-     <activity
+
+        <activity android:name=".detallepedido9"/>
+        <activity android:name=".detallepedido10"/>
+        <activity android:name=".detallepedido11"/>
+        <activity android:name=".detallepedido12"/>
+
+
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
 

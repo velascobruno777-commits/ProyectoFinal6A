@@ -18,10 +18,10 @@
         android:elevation="4dp"
         android:padding="8dp"
         android:src="@android:drawable/ic_media_previous"
-        android:tint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="12dp" />
+        android:layout_marginLeft="12dp"
+        app:tint="#FFFFFF" />
 
     <!-- Imagen hamburguesa con margen -->
     <ImageView

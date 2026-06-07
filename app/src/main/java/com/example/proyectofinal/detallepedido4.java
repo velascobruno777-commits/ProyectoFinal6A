@@ -26,7 +26,7 @@ public class detallepedido4 extends AppCompatActivity {
 
         // Botón para regresar al menú
         btnBack.setOnClickListener(v -> {
-            Intent intent = new Intent(detallepedido4.this, menu.class);
+            finish();
         });
 
         // Botón comprar
