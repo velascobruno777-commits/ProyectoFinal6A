@@ -15,13 +15,25 @@
         <activity android:name=".RegistroActivity" />
         <activity android:name=".Menu" />
 
-        <activity
+
+        <activity android:name=".letrero"/>
+        <activity android:name=".detallepedido1"/>
+        <activity android:name=".detallepedido2"/>
+        <activity android:name=".detallepedido3"/>
+        <activity android:name=".detallepedido4"/>
+        <activity android:name=".detallepedido5"/>
+        <activity android:name=".detallepedido6"/>
+        <activity android:name=".detallepedido7"/>
+        <activity android:name=".detallepedido8"/>
+     
+     <activity
             android:name=".MainActivity"
             android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
 
         </activity>
