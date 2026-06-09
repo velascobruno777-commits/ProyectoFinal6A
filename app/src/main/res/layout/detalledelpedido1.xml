@@ -123,7 +123,7 @@
     <!-- Botón de la compra -->
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnEnviar"
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginTop="24dp"

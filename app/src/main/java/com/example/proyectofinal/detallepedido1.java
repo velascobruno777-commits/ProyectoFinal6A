@@ -7,6 +7,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONObject;
 
 public class detallepedido1 extends AppCompatActivity {
 
@@ -14,6 +22,8 @@ public class detallepedido1 extends AppCompatActivity {
     Button btnEnviar;
     ImageButton btnBack;
 
+    String url = "http://192.168.20.63:5000/pedidos";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,16 +31,13 @@ public class detallepedido1 extends AppCompatActivity {
 
         Nombre = findViewById(R.id.inputNombre);
         Fecha = findViewById(R.id.inputFecha);
-        btnEnviar = findViewById(R.id.button);
+        btnEnviar = findViewById(R.id.btnEnviar);
         btnBack = findViewById(R.id.btnBack);
-
-        // Botón para regresar al menú
 
         btnBack.setOnClickListener(v -> {
             finish();
         });
 
-        // Botón comprar
         btnEnviar.setOnClickListener(v -> {
 
             String n = Nombre.getText().toString().trim();
@@ -41,10 +48,49 @@ public class detallepedido1 extends AppCompatActivity {
             } else if (f.isEmpty()) {
                 Fecha.setError("Escribe la fecha");
             } else {
-
-                Intent intent = new Intent(detallepedido1.this, letrero.class);
-                startActivity(intent);
+                guardarPedido(n, f);
             }
         });
+    }
+
+    private void guardarPedido(String usuario, String fecha) {
+
+        try {
+            JSONObject datos = new JSONObject();
+
+            datos.put("usuario", usuario);
+            datos.put("nombre_producto", "Hamburguesa");
+            datos.put("fecha", fecha);
+            datos.put("precio", 45);
+
+            JsonObjectRequest request = new JsonObjectRequest(
+                    Request.Method.POST,
+                    url,
+                    datos,
+                    response -> {
+                        Toast.makeText(detallepedido1.this, "Pedido guardado", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(detallepedido1.this, letrero.class);
+                        startActivity(intent);
+                    },
+                    error -> {
+                        String mensaje = "Error al guardar pedido";
+
+                        if (error.networkResponse != null) {
+                            mensaje = "Error código: " + error.networkResponse.statusCode;
+                        } else {
+                            mensaje = "No conecta con la API";
+                        }
+
+                        Toast.makeText(detallepedido1.this, mensaje, Toast.LENGTH_LONG).show();
+                    }
+            );
+
+            RequestQueue queue = Volley.newRequestQueue(detallepedido1.this);
+            queue.add(request);
+
+        } catch (Exception e) {
+            Toast.makeText(detallepedido1.this, "Error en los datos", Toast.LENGTH_SHORT).show();
+        }
     }
 }

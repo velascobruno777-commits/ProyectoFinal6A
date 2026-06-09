@@ -19,8 +19,7 @@ public class RegistroActivity extends Activity {
     EditText etNombre, etCorreoRegistro, etPasswordRegistro, etNumero;
     Button btnCrearCuenta;
 
-    String url = "http://10.0.0.10:5000/usuarios";
-
+    String url = "http://192.168.20.63:5000/usuarios";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
